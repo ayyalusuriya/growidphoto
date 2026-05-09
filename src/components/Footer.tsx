@@ -60,8 +60,8 @@ export default function Footer() {
 
           <span
             className="
-              text-6xl
-              md:text-4xl
+              text-3xl
+              md:text-2xl
               text-center
               font-extrabold 
               font-display
