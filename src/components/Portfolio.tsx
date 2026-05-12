@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import MediaModal from './MediaModal';
 
 // IMAGES
-import wedding1 from '../assets/weddings/wedding1.jpeg';
-import wedding2 from '../assets/weddings/wedding2.jpeg';
 import wedding3 from '../assets/weddings/wedding3.jpeg';
+import wedding2 from '../assets/weddings/wedding2.jpeg';
+import wedding1 from '../assets/weddings/wedding1.jpeg';
 import wedding4 from '../assets/weddings/wedding4.jpeg';
 import wedding5 from '../assets/weddings/wedding5.jpeg';
 import wedding6 from '../assets/weddings/wedding6.jpeg';
@@ -33,42 +33,42 @@ const portfolioItems: PortfolioItem[] = [
     id: 1,
     category: 'WEDDINGS',
     title: 'GROWID WEDDINGS',
-    image: wedding1,
+    image: wedding3,
     gridClass: 'md:col-span-8 md:row-span-4',
   },
   {
     id: 2,
     category: 'WEDDINGS',
     title: 'GROWID WEDDINGS',
-    image: wedding5,
+    image: wedding2,
     gridClass: 'md:col-span-4 md:row-span-2',
   },
   {
     id: 3,
     category: 'WEDDINGS',
     title: 'GROWID WEDDINGS',
-    image: wedding6,
+    image: wedding1,
     gridClass: 'md:col-span-4 md:row-span-2',
   },
   {
     id: 4,
     category: 'WEDDINGS',
     title: 'GROWID WEDDINGS',
-    image: wedding2,
+    image: wedding4,
     gridClass: 'md:col-span-4 md:row-span-2',
   },
   {
     id: 5,
     category: 'WEDDINGS',
     title: 'GROWID WEDDINGS',
-    image: wedding3,
+    image: wedding5,
     gridClass: 'md:col-span-4 md:row-span-2',
   },
   {
     id: 6,
     category: 'WEDDINGS',
     title: 'GROWID WEDDINGS',
-    image: wedding4,
+    image: wedding6,
     gridClass: 'md:col-span-4 md:row-span-2',
   },
   {

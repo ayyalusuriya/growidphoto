@@ -68,7 +68,9 @@ export default function CTA() {
             transition={{ delay: 0.35, duration: 0.7 }}
             className="text-zinc-400 text-lg md:text-xl mb-16 max-w-xl mx-auto font-sans leading-relaxed"
           >
-            Available for international travel and exclusive commissions. Book your visual legacy today.
+            Crafting cinematic stories
+            with emotion, elegance,
+            and timeless visuals...BOOK NOW..!
           </motion.p>
 
           <motion.div

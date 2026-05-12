@@ -1,11 +1,43 @@
-import { Quote } from 'lucide-react';
+import { Quote, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Testimonials() {
   return (
-    <section className="py-24 md:py-40 bg-zinc-950/20 overflow-hidden">
-      <div className="px-6 md:px-16 max-w-7xl mx-auto">
+    <section
+      className="
+        py-24
+        md:py-40
+        bg-zinc-950/20
+        overflow-hidden
+        relative
+      "
+    >
+      {/* BACKGROUND GLOW */}
+      <div
+        className="
+          absolute
+          top-0
+          left-1/2
+          -translate-x-1/2
+          w-[500px]
+          h-[500px]
+          bg-primary-gold/5
+          blur-[140px]
+          rounded-full
+          pointer-events-none
+        "
+      />
 
+      <div
+        className="
+          px-6
+          md:px-16
+          max-w-7xl
+          mx-auto
+          relative
+          z-10
+        "
+      >
         {/* SECTION TITLE */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,6 +67,7 @@ export default function Testimonials() {
               text-white
               uppercase
               tracking-tight
+              leading-none
             "
           >
             Words From <br />
@@ -49,6 +82,10 @@ export default function Testimonials() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{
+            y: -6,
+            scale: 1.01,
+          }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="
@@ -60,6 +97,9 @@ export default function Testimonials() {
             max-w-4xl
             mx-auto
             overflow-hidden
+            border
+            border-white/5
+            group
           "
         >
           {/* BIG QUOTE ICON */}
@@ -73,14 +113,41 @@ export default function Testimonials() {
               right-6
               md:w-32
               md:h-32
+              transition-all
+              duration-500
+              group-hover:text-primary-gold/20
             "
           />
+
+          {/* STAR RATING */}
+          <div
+            className="
+              flex
+              items-center
+              gap-1
+              mb-8
+              relative
+              z-10
+            "
+          >
+            {[...Array(5)].map((_, i) => (
+              <Star
+                key={i}
+                className="
+                  w-4
+                  h-4
+                  fill-primary-gold
+                  text-primary-gold
+                "
+              />
+            ))}
+          </div>
 
           {/* TESTIMONIAL TEXT */}
           <p
             className="
               text-zinc-200
-              font-san-serif
+              font-sans
               text-lg
               md:text-2xl
               leading-relaxed
@@ -90,14 +157,16 @@ export default function Testimonials() {
               max-w-3xl
             "
           >
-            “Delivering high-quality visual 
-             experiences on a low budget
-             without compromising the final output.”
+            “The whole shoot felt really
+            comfortable and easy, and honestly,
+            the final photos turned out even
+            better than we expected. Every
+            picture looked so clean, classy,
+            and beautifully edited.”
           </p>
 
           {/* CLIENT INFO */}
           <div className="mt-10 relative z-10">
-
             <h4
               className="
                 text-white
@@ -110,7 +179,7 @@ export default function Testimonials() {
                 tracking-wide
               "
             >
-              Madhesh
+              MADHESH
             </h4>
 
             <p
@@ -124,7 +193,6 @@ export default function Testimonials() {
             >
               Wedding Client
             </p>
-
           </div>
 
           {/* GLOW EFFECT */}
@@ -135,11 +203,27 @@ export default function Testimonials() {
               bg-gradient-to-br
               from-primary-gold/5
               to-transparent
+              opacity-70
+              pointer-events-none
+            "
+          />
+
+          {/* HOVER LIGHT */}
+          <div
+            className="
+              absolute
+              inset-0
+              opacity-0
+              group-hover:opacity-100
+              transition-opacity
+              duration-500
+              bg-gradient-to-tr
+              from-primary-gold/10
+              to-transparent
               pointer-events-none
             "
           />
         </motion.div>
-
       </div>
     </section>
   );

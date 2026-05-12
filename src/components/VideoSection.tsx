@@ -43,9 +43,27 @@ export default function VideoSection() {
             CINEMATIC STORYTELLING
           </h2>
           <p className="text-zinc-400 text-lg md:text-xl mb-12 leading-relaxed">
-            We don't just record video; we craft visual legacies. Every frame is
-            color-graded with Hollywood-level precision to ensure your story feels timeless.
+            Delivering high-quality visual experiences on a low budget without compromising the final output.
           </p>
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="font-extrabold font-display text-primary-white text-extrabold  mb-6 block tracking-[0.15em] text-sm uppercase"
+          >
+            Madhesh
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="font-extrabold font-display text-primary-gold text-extrabold  mb-6 block tracking-[0.15em] text-sm uppercase"
+          >
+            Wedding Client
+          </motion.span>
+
           <motion.button
             onClick={() => setIsVideoOpen(true)}
             whileHover={{ x: 6 }}

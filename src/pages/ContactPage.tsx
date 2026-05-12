@@ -178,6 +178,20 @@ export default function ContactPage() {
 
               <h1
                 className="
+                 font-display
+                  text-4xl
+                  sm:text-5xl
+                  md:text-7xl
+                  text-white
+                  font-black
+                    text-white/40
+                    italic
+                "
+              >
+                STORIES BY <br />
+
+                <span
+                  className="
                   font-display
                   text-4xl
                   sm:text-5xl
@@ -190,17 +204,9 @@ export default function ContactPage() {
                   md:mb-8
                   leading-none
                   break-words
-                "
-              >
-                GROWID <br />
-
-                <span
-                  className="
-                    text-white/40
-                    italic
                   "
                 >
-                  STORIES
+                  GROWID
                 </span>
               </h1>
 
@@ -214,9 +220,9 @@ export default function ContactPage() {
                   leading-relaxed
                 "
               >
-                We are currently accepting
-                a limited number of
-                commissions for 2025-2026.
+                Framing emotions,
+                light, and memories
+                into cinematic art.
               </p>
             </motion.div>
 
