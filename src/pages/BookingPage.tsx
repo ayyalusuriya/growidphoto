@@ -119,7 +119,7 @@ export default function BookingPage() {
 🎉 Event: ${formData.eventType}
 📝 Description: ${formData.description}`;
 
-    const whatsappURL = `https://wa.me/9159005236?text=${encodeURIComponent(message)}`;
+    const whatsappURL = `https://wa.me/8072559071?text=${encodeURIComponent(message)}`;
     window.location.href = whatsappURL;
   };
 
