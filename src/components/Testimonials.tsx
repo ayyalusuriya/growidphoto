@@ -1,147 +1,144 @@
-import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-
-const testimonials = [
-  {
-    text: "GROWID didn't just photograph our wedding; they captured the invisible tension and joy of the day. The results are nothing short of a masterpiece. It's high-art in wedding form.",
-    author: "MADHESH",
-    location: "GROWID WEDDINGS"
-  },
-  {
-    text: "The most professional team I've ever worked with. The lighting, the composition, and the final delivery were all world-class. Highly recommended for any premium brand.",
-    author: "ALWAR BALAJI",
-    location: "IPHONE Shooter"
-  }
-];
+import { Quote } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Testimonials() {
-  const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(1);
-
-  const next = () => {
-    setDirection(1);
-    setIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prev = () => {
-    setDirection(-1);
-    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const variants = {
-    enter: (d: number) => ({ opacity: 0, x: d * 40 }),
-    center: { opacity: 1, x: 0, transition: { duration: 0.55, ease: [0.23, 1, 0.32, 1] as any } },
-    exit: (d: number) => ({ opacity: 0, x: d * -40, transition: { duration: 0.35 } }),
-  };
-
   return (
     <section className="py-24 md:py-40 bg-zinc-950/20 overflow-hidden">
-      <div className="px-8 md:px-16 max-w-7xl mx-auto">
+      <div className="px-6 md:px-16 max-w-7xl mx-auto">
 
-        {/* HEADER */}
-        <div className="mb-16 md:mb-24 flex justify-between items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+        {/* SECTION TITLE */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
+          <p
+            className="
+              text-primary-gold
+              uppercase
+              tracking-[0.3em]
+              text-xs
+              md:text-sm
+              mb-4
+            "
           >
-            <span className="font-mono text-primary-gold text-xs uppercase tracking-[0.2em] mb-2 block">
-              CLIENT PRAISE
+            Testimonials
+          </p>
+
+          <h2
+            className="
+              text-4xl
+              md:text-6xl
+              font-black
+              text-white
+              uppercase
+              tracking-tight
+            "
+          >
+            Words From <br />
+
+            <span className="text-white/40 italic">
+              Our Clients
             </span>
-            <h2 className="font-display text-4xl md:text-5xl text-white font-bold uppercase">
-              THE WORDS
-            </h2>
-          </motion.div>
-
-          {/* NAV BUTTONS */}
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="flex gap-4"
-          >
-            <motion.button
-              onClick={prev}
-              aria-label="Previous testimonial"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-12 h-12 border border-white/10 rounded-full flex items-center justify-center hover:border-primary-gold hover:text-primary-gold transition-all"
-            >
-              <span className="sr-only">Previous testimonial</span>
-              <ChevronLeft className="w-5 h-5" />
-            </motion.button>
-
-            <motion.button
-              onClick={next}
-              aria-label="Next testimonial"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-12 h-12 border border-white/10 rounded-full flex items-center justify-center hover:border-primary-gold hover:text-primary-gold transition-all"
-            >
-              <span className="sr-only">Next testimonial</span>
-              <ChevronRight className="w-5 h-5" />
-            </motion.button>
-          </motion.div>
-        </div>
+          </h2>
+        </motion.div>
 
         {/* TESTIMONIAL CARD */}
-        <div className="relative min-h-[280px]">
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={index}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              className="glass-panel p-10 md:p-16 relative rounded-2xl max-w-4xl"
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="
+            glass-panel
+            p-8
+            md:p-16
+            relative
+            rounded-3xl
+            max-w-4xl
+            mx-auto
+            overflow-hidden
+          "
+        >
+          {/* BIG QUOTE ICON */}
+          <Quote
+            className="
+              text-primary-gold/10
+              w-24
+              h-24
+              absolute
+              top-6
+              right-6
+              md:w-32
+              md:h-32
+            "
+          />
+
+          {/* TESTIMONIAL TEXT */}
+          <p
+            className="
+              text-zinc-200
+              font-san-serif
+              text-lg
+              md:text-2xl
+              leading-relaxed
+              font-light
+              relative
+              z-10
+              max-w-3xl
+            "
+          >
+            “Delivering high-quality visual 
+             experiences on a low budget
+             without compromising the final output.”
+          </p>
+
+          {/* CLIENT INFO */}
+          <div className="mt-10 relative z-10">
+
+            <h4
+              className="
+                text-white
+                text-xl
+                md:text-2xl
+                font-extrabold
+                font-display
+                mb-2
+                uppercase
+                tracking-wide
+              "
             >
-              {/* BIG QUOTE ICON */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
-                <Quote className="text-primary-gold/10 w-24 h-24 absolute top-8 right-8 md:w-32 md:h-32" />
-              </motion.div>
+              Madhesh
+            </h4>
 
-              {/* TEXT */}
-              <p className="font-sans text-lg md:text-2xl lg:text-3xl text-white mb-10 italic leading-relaxed font-light relative z-10">
-                "{testimonials[index].text}"
-              </p>
+            <p
+              className="
+                text-primary-gold
+                uppercase
+                tracking-[0.2em]
+                text-xs
+                mt-2
+              "
+            >
+              Wedding Client
+            </p>
 
-              {/* AUTHOR */}
-              <div className="flex items-center gap-4">
-                <div className="w-px h-8 bg-primary-gold/40" />
-                <div>
-                  <h5 className="font-display font-bold text-white uppercase tracking-[0.2em] text-sm md:text-base">
-                    {testimonials[index].author}
-                  </h5>
-                  <span className="font-mono text-zinc-500 text-[10px] md:text-xs tracking-widest mt-1 block">
-                    {testimonials[index].location}
-                  </span>
-                </div>
-              </div>
+          </div>
 
-              {/* Dot indicators */}
-              <div className="flex gap-2 mt-8">
-                {testimonials.map((_, i) => (
-                  <motion.button
-                    key={i}
-                    onClick={() => { setDirection(i > index ? 1 : -1); setIndex(i); }}
-                    aria-label={`Testimonial ${i + 1}`}
-                    animate={{ width: i === index ? 24 : 8, backgroundColor: i === index ? '#fec903' : 'rgba(255,255,255,0.2)' }}
-                    transition={{ duration: 0.3 }}
-                    className="h-1.5 rounded-full"
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+          {/* GLOW EFFECT */}
+          <div
+            className="
+              absolute
+              inset-0
+              bg-gradient-to-br
+              from-primary-gold/5
+              to-transparent
+              pointer-events-none
+            "
+          />
+        </motion.div>
 
       </div>
     </section>

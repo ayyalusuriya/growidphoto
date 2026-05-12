@@ -48,8 +48,8 @@ export default function Hero() {
             transition={{ delay: 0.85 }}
             className="font-display text-4xl md:text-5xl lg:text-7xl xl:text-8xl text-white mb-8 leading-[1.1] uppercase font-black"
           >
-            CAPTURING <br />
-            <span className="italic font-extralight text-white/80">ETERNITY</span>
+            TURNING BRANDS <br />
+            <span className="italic font-extralight text-white/80">INTO CINEMA</span>
           </motion.h1>
 
           <motion.p
@@ -58,8 +58,9 @@ export default function Hero() {
             transition={{ delay: 1.0 }}
             className="text-zinc-400 text-base md:text-lg lg:text-xl mb-12 max-w-md leading-relaxed font-sans"
           >
-            Bespoke visual storytelling for those who demand world-class artistry and
-            uncompromising quality in every frame.
+            
+          Bold visuals. Clean storytelling. 
+          Premium cinematic content that makes brands impossible to ignore.
           </motion.p>
 
           <motion.div

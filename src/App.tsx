@@ -4,11 +4,16 @@
  */
 
 import { AnimatePresence } from 'framer-motion';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from 'react-router-dom';
+
 import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
 import ContactPage from './pages/ContactPage';
-import CustomCursor from './components/CustomCursor';
 import PageTransition from './components/PageTransition';
 
 // Inner component so we can call useLocation() inside Router
@@ -26,6 +31,7 @@ function AnimatedRoutes() {
             </PageTransition>
           }
         />
+
         <Route
           path="/book"
           element={
@@ -34,6 +40,7 @@ function AnimatedRoutes() {
             </PageTransition>
           }
         />
+
         <Route
           path="/contact"
           element={
@@ -50,8 +57,8 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <Router>
-      <div className="relative min-h-screen">
-        <CustomCursor />
+      {/* NORMAL CURSOR ENABLED */}
+      <div className="relative min-h-screen cursor-auto">
         <AnimatedRoutes />
       </div>
     </Router>

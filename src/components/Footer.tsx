@@ -106,7 +106,7 @@ export default function Footer() {
             className="
               text-[10px]
               tracking-widest
-              text-zinc-500
+              text-zinc-500 
               hover:text-white
               transition-colors
               duration-300

@@ -1,30 +1,30 @@
 import { Heart, Music, Sparkles, Video } from 'lucide-react';
-import { motion, type Variants } from 'motion/react';
+import { motion, type Variants } from 'framer-motion';
 
 const services = [
   {
     icon: Heart,
     title: "Weddings",
     description:
-      "Cinematic coverage of your most intimate moments with a focus on raw emotion and architectural elegance.",
+      "For couples who want their wedding to feel straight out of a film.",
   },
   {
     icon: Music,
     title: "Concerts",
     description:
-      "High-energy visual documentation of world-class performances, capturing the pulse of the crowd and the soul of the artist.",
+      "Where music, visuals, and atmosphere come together perfectly.",
   },
   {
     icon: Sparkles,
     title: "Events",
     description:
-      "Sophisticated event photography for corporate galas, fashion shows, and exclusive luxury gatherings.",
+      "Making every event look as good as it felt in real life.",
   },
   {
     icon: Video,
-    title: "Cinema",
+    title: "Short Films",
     description:
-      "Premium 4K videography that transforms your moments into high-end cinematic short films with editorial grading.",
+      "Crafting high-end films with cinematic direction, clean visuals, and editorial-inspired grading.",
   },
 ];
 
@@ -100,7 +100,7 @@ export default function Services() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-80px' }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
       >
         {services.map((service) => (
           <motion.div
