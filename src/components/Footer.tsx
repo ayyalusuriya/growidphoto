@@ -35,45 +35,56 @@ export default function Footer() {
         "
       >
 
-        {/* LOGO */}
-        <div
-          className="
-            flex
-            items-center
-            gap-0
-            leading-none
-          "
-        >
+       {/* LOGO */}
+<div
+  className="
+    flex
+    items-center
+    justify-center
+    w-full
+  "
+>
 
-          <img
-            src={logo}
-            alt="Growid Logo"
-            className="
-              w-40
-              h-40
-              md:w-42
-              md:h-42
-              object-contain
-              -mr-16
-            "
-          />
+  <div
+    className="
+      flex
+      items-center
+      justify-center
+      -space-x-2
+    "
+  >
 
-          <span
-            className="
-              text-3xl
-              md:text-2xl
-              text-center
-              font-extrabold 
-              font-display
-              tracking-[0.06em]
-              text-white
-              uppercase
-            "
-          >
-            GROWID
-          </span>
+    <img
+      src={logo}
+      alt="Growid Logo"
+      className="
+        w-16
+        h-16
+        md:w-20
+        md:w-30
+        md:h-30
+        object-contain
+      "
+    />
 
-        </div>
+    <span
+      className="
+        text-2xl
+        md:text-4xl
+        font-extrabold
+        font-display
+        tracking-[0.08em]
+        text-white
+        uppercase
+        leading-none
+      "
+    >
+      GROWID
+    </span>
+
+  </div>
+
+</div>
 
         {/* NAVIGATION */}
         <nav

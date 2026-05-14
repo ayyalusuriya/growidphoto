@@ -7,7 +7,7 @@ export default function CTA() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true }}   
         transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
         className="max-w-6xl mx-auto bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-900 border border-white/5 p-12 md:p-32 text-center relative overflow-hidden group rounded-3xl"
       >

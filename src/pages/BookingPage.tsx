@@ -149,7 +149,7 @@ export default function BookingPage() {
             </span>
 
             <h1 className="font-display text-5xl md:text-7xl text-white font-black uppercase">
-              Book Your Legacy
+              Book Your Slot Now...!
             </h1>
 
             <motion.div
